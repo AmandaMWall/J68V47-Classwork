@@ -3,10 +3,22 @@ import java.util.Scanner;
 public class L9E3 {
 
     public static int askQuestion(int number1, int number2){
-        Scanner scanner = new Scanner(System.in);
-        System.out.format("What is %d + %d? ",number1, number2);
-
-        int userAnswer = scanner.nextInt();
+        int userAnswer = 0;
+        
+        while (true) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.format("What is %d + %d? ",number1, number2);
+    
+            String strAnswer = scanner.nextLine();
+    
+            try {
+                int i = Integer.parseInt(strAnswer);
+                userAnswer = i;
+                break;
+            } catch (NumberFormatException e) {
+                System.out.println("Please enter integers only\n");
+            }
+        }
 
         return userAnswer;
     }
