@@ -14,7 +14,7 @@ public class L12E3 {
         ferrari.condition = "Good";
 
         System.out.println("--------------------------------------");
-        System.out.format("%s %s (%d)\n", ferrari.make, ferrari.make, ferrari.year);
+        System.out.format("%s %s (%d)\n", ferrari.make, ferrari.model, ferrari.year);
         System.out.format("Vin: %s\n", ferrari.vin);
         System.out.format("Colour: %s\n", ferrari.colour);
         System.out.format("Mileage: %s\n", ferrari.mileage);
